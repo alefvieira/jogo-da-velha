@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo_jvelha.css">
+    <script src="jogo_da_velha.js"></script>
+
+</head>
+<!-- onload="hidejogo()" -->
+<body >
+    <header >
+        <div class="container ">
+            <h1>Jogo da Velha</h1>
+        </div>
+    </header>
+    <main>
+    <!-- espaçamento -->
+    <section class="segunda_parte"></section>
+    <!-- parte inicial  -->
+    <section class="container" id="pagina_inicial">
+        <div class="row">
+            <div class="col-md-12">
+                <div><h4>JOGO DA VELHA</h4></div>
+                <div class="row ">
+                    <div class="col-md-4"><p>Player 1</p> 
+                        <img src="imagem/player1.png" alt="Jogador 1"><br>
+                        <input type="text" id="apelido1" maxlength="10" placeholder="Apelido Jogador 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagem/img_iniciar_150.png" id="inicia_jogo" alt="Iniciar Jogo">
+                    </div>
+
+                    <div class="col-md-4"><p>Player 2</p> 
+                        <img src="imagem/player2.png" alt="Jogador 2" ><br>
+                        <input type="text" id="apelido2" maxlength="10" placeholder="Apelido Jogador 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- inicio do jogo -->
+    <section  id="palco_jogo" >
+        <div class="container row ">
+            <div class="col-md-3"><p>Player 1</p> 
+                <img src="imagem/player1.png" alt="Jogador 1"><br>
+                <p id="setaapelido1" ></p>
+            </div>
+            <div class="col-md-6">
+
+                <table  >
+                    <tr style="border-bottom: solid 1px black">
+                        <td class="jogada" id="a-1" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="a-2" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="a-3"></td>
+                    </tr >
+                    <tr style="border-bottom: solid 1px black">
+                        <td class="jogada" id="b-1" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="b-2" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="b-3"></td>
+                    </tr>
+                    <tr>
+                        <td class="jogada" id="c-1" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="c-2" style="border-right: solid 1px black"></td>
+                        <td class="jogada" id="c-3"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+            <div class="col-md-3"><p>Player 2</p> 
+                <img src="imagem/player2.png" alt="Jogador 2" ><br>
+                <p id="setaapelido2" ></p>
+            </div>
+            <div>
+                <h3 class="recebe_texto_vic"></h3>
+            </div>
+            <input type="button" class="btn btn-success" value="Recomeçar" id="volta_ini" >
+        </div>
+
+        
+    </section>
+    <!-- espaçamento -->
+    <section class="segunda_parte">
+       
+    </section>
+    </main>
+    <!-- <footer>
+        <div class="container">
+            <p>&copy; Fim da página</p>
+        </div>
+        
+    </footer> -->
+</body>
+</html>
